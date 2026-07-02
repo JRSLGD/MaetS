@@ -18,8 +18,8 @@ return new class extends Migration
             $table->foreignId('game_id')->constrained('games')->cascadeOnDelete();
             $table->unsignedTinyInteger('rating')->default(0);
             $table->text('comment')->nullable();
-            $table->timestamp('created_at')->useCurrent();
-            $table->timestamp('updated_at')->useCurrent();
+            $table->timestamps();
+            
             $table->unique(['user_id', 'game_id']); 
         });
 
