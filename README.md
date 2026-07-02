@@ -4,7 +4,11 @@
 ![Laravel](https://img.shields.io/badge/Laravel-13.x-red)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
-Meats est une application Laravel prête à être développée et à évoluer selon vos besoins.
+Meats est une replica de steam (uniquement pour l'apprentissage)
+
+## Devs & Contributeurs
+
+Voyez [DEV.md](DEV.md) pour plus d'informations sur les contributeurs et comment contribuer au projet.
 
 ## 🚀 Démarrage rapide
 
