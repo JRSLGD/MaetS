@@ -11,7 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        //
+        //games
+        Schema::create('games', function (Blueprint $table) {
+            $table->id();
+            $table->string('title');
+            $table->string('slug')->unique();
+            $table->text('description');
+            $table->string('cover_image_url')->nullable();
+            $table->timestamps();
+        });
     }
 
     /**
