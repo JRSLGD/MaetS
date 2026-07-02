@@ -17,7 +17,9 @@ return new class extends Migration
             $table->string('title');
             $table->string('slug')->unique();
             $table->text('description');
-            $table->string('cover_image_url')->nullable();
+            $table->decimal('price', 10, 2);
+            $table->string('cover_image');
+            
             $table->timestamps();
         });
     }
