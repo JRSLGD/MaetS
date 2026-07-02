@@ -20,8 +20,9 @@ return new class extends Migration
             $table->decimal('price', 10, 2);
             $table->string('cover_image');
             $table->string('download_url');
-            $table->timestamp('published_at')->nullable();
-            $table->timestamp('updated_at')->nullable();
+
+            //let's just use created_at and updated_at
+            $table->timestamps();
         });
     }
 
