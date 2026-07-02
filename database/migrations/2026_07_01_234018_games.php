@@ -22,7 +22,6 @@ return new class extends Migration
             $table->string('download_url');
             $table->timestamp('published_at')->nullable();
             $table->timestamp('updated_at')->nullable();
-            $table->timestamps();
         });
     }
 
