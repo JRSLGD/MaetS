@@ -8,8 +8,9 @@ use Illuminate\Support\Str;
 class GameFactory extends Factory
 {
     public function definition(): array
-    {
-        $title = $this->faker->unique()->words(2, true);
+    {   
+        // since faker doesn't provide a game provider, we'll just use random a title
+        $title = $this->faker->unique()->title();
 
         return [
             'title' => $title,
