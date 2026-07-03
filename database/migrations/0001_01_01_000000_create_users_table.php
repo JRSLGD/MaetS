@@ -13,10 +13,14 @@ return new class extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
-            $table->string('username')->unique();
+            // yeah, i think user.username is a lil redundant, user.name is kinda simpler
+            $table->string('name')->unique();
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            // user.display_name will be the user "username"; 
+            // it can be and if it's NULL
+            // display the name instead
             $table->string('display_name')->nullable();
             $table->string('avatar_url')->nullable();
             $table->enum('role', ['user', 'admin'])->default('user');
