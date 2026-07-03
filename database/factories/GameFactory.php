@@ -9,8 +9,8 @@ class GameFactory extends Factory
 {
     public function definition(): array
     {   
-        // since faker doesn't provide a game provider, we'll just use random a title
-        $title = $this->faker->unique()->title();
+        // ok... turns out title run out of unique titles pretty quickly, so we'll just use 2 random words instead
+        $title = $this->faker->unique()->words(2, true);
 
         return [
             'title' => $title,
