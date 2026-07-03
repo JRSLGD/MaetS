@@ -13,7 +13,7 @@ class UserSeeder extends Seeder
     public function run(): void
     {
         User::create([
-            'username' => 'admin',
+            'name' => 'admin',
             'email' => 'admin@steam.local',
             'password' => Hash::make('passwd123'),
             'role' => 'admin',
